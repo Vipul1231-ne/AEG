@@ -1,0 +1,15 @@
+﻿services:
+  - type: web
+    name: aeg
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    dockerCommand: python -m aegistrap --config config/hosting-dashboard.yaml --allow-public-dashboard
+    envVars:
+      - key: AEGISTRAP_DASHBOARD_SECRET_KEY
+        generateValue: true
+      - key: AEGISTRAP_DASHBOARD_HOST
+        value: 0.0.0.0
+      - key: AEGISTRAP_DASHBOARD_PORT
+        value: 10000
