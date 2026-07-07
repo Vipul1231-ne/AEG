@@ -1,0 +1,26 @@
+kali@kali:~$ curl -kv https://10.47.153.65:8443/
+* Trying 10.47.153.65:8443...
+* Connected to 10.47.153.65 (10.47.153.65) port 8443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 handshake complete
+* Server certificate: CN=edge-router-01
+* Self-signed certificate encountered
+> GET / HTTP/1.1
+> Host: 10.47.153.65:8443
+> User-Agent: curl/8.4.0
+>
+< HTTP/1.1 200 OK
+< Server: Apache/2.4.52
+< Content-Type: text/html; charset=utf-8
+<
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edge Gateway Management</title>
+  <style>
+    :root { --blue:#1f5f99; --dark:#1f2933; --line:#d8dee6; --muted:#66788a; }
+    * { box-sizing:border-box; }
+ 
+<!-- ... truncated ... -->

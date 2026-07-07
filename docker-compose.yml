@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  aegistrap:
+    build: .
+    container_name: aegistrap
+    restart: unless-stopped
+    ports:
+      # Map container honeypot ports to host ports
+      - "2222:2222" # SSH
+      - "2121:2121" # FTP
+      - "8080:8080" # HTTP
+      - "8443:8443" # HTTPS
+      - "5000:5000" # Flask Dashboard
+    environment:
+      # Override the dashboard host to 0.0.0.0 inside the container so it's accessible from host
+      - AEGISTRAP_DASHBOARD_HOST=0.0.0.0
+    env_file:
+      - .env
+    volumes:
+      # Bind mount data and logs to persist database records and log files locally
+      - ./data:/app/data
+      - ./logs:/app/logs

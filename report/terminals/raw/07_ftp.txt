@@ -1,0 +1,28 @@
+kali@kali:~$ ftp 10.47.153.65 2121
+Connected to 10.47.153.65.
+220 vsftpd 3.0.5 ready
+Name (10.47.153.65:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+227 Entering Passive Mode (10,47,153,65,195,80).
+150 Here comes the directory listing.
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 bin
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 boot
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 dev
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 etc
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 home
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 opt
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 proc
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 root
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 run
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 srv
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 tmp
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 usr
+drwxr-xr-x   2 root     root             4096 Jul 07 07:00 var
+226 Directory send OK.
+ftp> bye
+221 Goodbye.

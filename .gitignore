@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables (Secrets)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.staging
+
+# AegisTrap Runtime files
+data/aegistrap.db
+data/ssh_host_rsa.key
+config/certs/*.key
+config/certs/*.crt
+logs/
+*smoke.db
